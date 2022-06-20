@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
-import Map, { Marker, Source, Layer } from 'react-map-gl';
+import Map, { Marker } from 'react-map-gl';
 import { useSelector } from 'react-redux'
+import mapMarker from "../assets/images/mapbox-icon.png"
 
 const MAPBOX_TOKEN =  process.env.REACT_APP_MAPBOX_API;
 
@@ -34,6 +35,7 @@ const MapBox = () => {
   return (
     <div className="map-container">
       <Map
+
         {...viewPort}
         onMove={prev => setViewPort(prev.viewPort)}
         onViewportChange={viewPort => setViewPort(viewPort)}
@@ -41,12 +43,9 @@ const MapBox = () => {
         mapboxAccessToken={MAPBOX_TOKEN}
       >
         {selectedFlat &&
-          <Marker
-          latitude= "47.3983"
-          longitude= "8.5417"
-            >
-          </Marker>
-        }
+        <Marker longitude={selectedFlat.long} latitude={selectedFlat.lat} >
+          <img src={mapMarker} style={{width: "45px"}}/>
+        </Marker>}
 
       </Map>
     </div>
