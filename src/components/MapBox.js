@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom'
 import Map, { Marker, Source, Layer } from 'react-map-gl';
 import { v4 as uuidv4 } from 'uuid';
 
-
-
 const MAPBOX_TOKEN =  process.env.REACT_APP_MAPBOX_API;
 
 const MapBox = ({ flats }) => {
