@@ -5,9 +5,11 @@ import "../src/assets/application.scss"
 import { Provider } from 'react-redux'
 import { createStore, combineReducers } from 'redux'
 import flatsReducer from "./reducers/flats_reducer"
+import SelectFlatReducer from "./reducers/selectFlat_reducer"
 
 const reducers = combineReducers({
-  flats: flatsReducer
+  flats: flatsReducer,
+  selectedFlat: SelectFlatReducer
 })
 
 const store = createStore(reducers)
@@ -16,5 +18,5 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store}>
       <App />
-  // </Provider>
+  </Provider>
 );

@@ -1,6 +1,13 @@
-// import { Link } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { selectFlat } from "../actions/index"
 
 const FlatCard = ({flat}) => {
+
+  const dispatch = useDispatch()
+
+  const handleClick = () => {
+    dispatch(selectFlat(flat))
+  }
 
   return (
     <div className="card card-category">
@@ -13,7 +20,7 @@ const FlatCard = ({flat}) => {
           <div className="fs-6 fw-normal">{flat.price} CHF/day</div>
         </div>
       </div>
-      {/* <Link to={`${flat.id}`} className='btn btn-primary btn-sm my-1 w-25'>More</Link> */}
+      <button onClick={handleClick} className='btn btn-primary'>Select</button>
     </div>
   )
 }

@@ -1,5 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
 
+// Will come from an API Call in V1
 const flats = [
   {id: uuidv4(), address: "Locarno, Switzerland", description:"Lorem ipsum, adipisicing elit.", lat: 46.1670, long: 8.7943, price: 200, imgURL: "https://images.unsplash.com/photo-1613545325268-9265e1609167?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"},
   {id: uuidv4(), address: "Tenero-Contra, Switzerland", description:"Lorem ipsum, adipisicing elit.", lat: 46.1805, long: 8.8491, price: 250, imgURL: "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80"},
