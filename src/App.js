@@ -2,7 +2,7 @@ import { useState } from "react";
 import FlatsList from './components/FlatsList';
 import MapBox from './components/MapBox';
 import { v4 as uuidv4 } from 'uuid';
-import '../src/styles/App.css';
+// import '../src/styles/App.css';
 
 function App() {
 

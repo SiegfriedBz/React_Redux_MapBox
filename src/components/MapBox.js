@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import Map, { Marker, Source, Layer } from 'react-map-gl';
 import { v4 as uuidv4 } from 'uuid';
-import "../styles/map.css"
-import 'mapbox-gl/dist/mapbox-gl.css';
+
+
 
 const MAPBOX_TOKEN =  process.env.REACT_APP_MAPBOX_API;
 
