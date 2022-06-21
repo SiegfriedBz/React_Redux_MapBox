@@ -1,5 +1,4 @@
 export default function flatsReducer(state, action) {
-
   if (state === undefined) {
     return []
   }

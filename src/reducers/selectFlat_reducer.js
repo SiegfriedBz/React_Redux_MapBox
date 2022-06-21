@@ -1,5 +1,4 @@
 export default function SelectFlatReducer(state, action) {
-
   if (state === undefined) {
     return null
   }

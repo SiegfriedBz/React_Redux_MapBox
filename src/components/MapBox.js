@@ -6,6 +6,8 @@ import mapMarker from "../assets/images/mapbox-icon.png"
 const MAPBOX_TOKEN =  process.env.REACT_APP_MAPBOX_API;
 
 const MapBox = () => {
+
+  const flats = useSelector(state => state.flats)
   const selectedFlat = useSelector(state => state.selectedFlat)
 
   const [viewPort, setViewPort] = useState({
@@ -20,7 +22,7 @@ const MapBox = () => {
       setViewPort({
         latitude: selectedFlat.lat,
         longitude: selectedFlat.long,
-        zoom: 12
+        zoom: 11
       })
     }
     return () => {
