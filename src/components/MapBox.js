@@ -17,12 +17,11 @@ const MapBox = () => {
   });
 
   useEffect(() => {
-
     if(selectedFlat) {
       setViewPort({
         latitude: selectedFlat.lat,
         longitude: selectedFlat.long,
-        zoom: 11
+        zoom: 9
       })
     }
     return () => {
@@ -46,7 +45,7 @@ const MapBox = () => {
       >
         {selectedFlat &&
         <Marker longitude={selectedFlat.long} latitude={selectedFlat.lat} >
-          <img src={mapMarker} style={{width: "45px"}}/>
+          <img src={mapMarker} alt="map marker" style={{width: "45px"}} />
         </Marker>}
 
       </Map>
